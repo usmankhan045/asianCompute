@@ -12,7 +12,7 @@ export default function FinalCTA() {
   return (
     <section
       ref={ref}
-      className="relative py-32 px-4 sm:px-6 lg:px-8 z-10 overflow-hidden"
+      className="relative py-32 px-4 sm:px-6 lg:px-8 z-10 overflow-hidden scroll-mt-20"
       id="contact"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10" />

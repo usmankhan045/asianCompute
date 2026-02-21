@@ -13,6 +13,7 @@ import {
 
 const services = [
   {
+    id: "lead-qualification",
     title: "AI Lead Qualification Systems",
     description:
       "Automatically qualify, score, and route leads to your team. Never miss a hot prospect again.",
@@ -20,6 +21,7 @@ const services = [
     gradient: "from-primary/20 to-primary/5",
   },
   {
+    id: "crm-automation",
     title: "Smart CRM & Pipeline Automation",
     description:
       "n8n-powered workflows that sync data, update pipelines, and trigger actions automatically.",
@@ -28,6 +30,7 @@ const services = [
     badge: "n8n Powered",
   },
   {
+    id: "ai-chatbots",
     title: "AI Chatbots for Sales & Support",
     description:
       "Intelligent assistants that handle inquiries, book calls, and qualify leads 24/7.",
@@ -35,6 +38,7 @@ const services = [
     gradient: "from-accent/20 to-accent/5",
   },
   {
+    id: "ecommerce",
     title: "E-commerce AI Retention Workflows",
     description:
       "Abandoned cart recovery, personalized recommendations, and automated re-engagement systems.",
@@ -50,7 +54,7 @@ export default function Services() {
   return (
     <section
       ref={ref}
-      className="relative py-24 px-4 sm:px-6 lg:px-8 z-10"
+      className="relative py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
       id="services"
     >
       <div className="max-w-7xl mx-auto">
@@ -101,7 +105,7 @@ export default function Services() {
                 <p className="text-text-muted mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                <Link href="/services" className="flex items-center gap-2 text-primary font-semibold group-hover:gap-4 transition-all">
+                <Link href={`/services?service=${service.id}`} className="flex items-center gap-2 text-primary font-semibold group-hover:gap-4 transition-all">
                   Explore
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>

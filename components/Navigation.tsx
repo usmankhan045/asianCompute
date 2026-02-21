@@ -22,21 +22,37 @@ export default function Navigation() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: "About", href: "/#about" },
     {
       name: "Services",
-      href: "/services",
+      href: "/#services",
       submenu: [
-        { name: "AI Lead Qualification", href: "/services#lead-qualification" },
-        { name: "CRM Automation", href: "/services#crm-automation" },
-        { name: "AI Chatbots", href: "/services#ai-chatbots" },
-        { name: "E-commerce Workflows", href: "/services#ecommerce" },
+        { name: "AI Lead Qualification", href: "/services?service=lead-qualification" },
+        { name: "CRM Automation", href: "/services?service=crm-automation" },
+        { name: "AI Chatbots", href: "/services?service=ai-chatbots" },
+        { name: "E-commerce Workflows", href: "/services?service=ecommerce" },
       ],
     },
-    { name: "How It Works", href: "/how-it-works" },
-    { name: "Case Studies", href: "/case-studies" },
-    { name: "Contact", href: "/contact" },
+    { name: "How It Works", href: "/#how-it-works" },
+    { name: "Case Studies", href: "/#case-studies" },
+    { name: "Contact", href: "/#contact" },
   ];
+
+  const handleLinkClick = (href: string, e: React.MouseEvent) => {
+    if (href.startsWith("/#")) {
+      e.preventDefault();
+      const hash = href.substring(1);
+      if (pathname === "/") {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        window.location.href = href;
+      }
+      setIsOpen(false);
+    }
+  };
 
   const isActive = (href: string) => pathname === href;
 
@@ -110,17 +126,18 @@ export default function Navigation() {
                 );
               }
               return (
-                <Link
+                <a
                   key={link.name}
                   href={link.href}
-                  className={`px-3 py-2 rounded-lg transition-colors ${
-                    isActive(link.href)
+                  onClick={(e) => handleLinkClick(link.href, e)}
+                  className={`px-3 py-2 rounded-lg transition-colors cursor-pointer ${
+                    isActive(link.href) || (link.href.startsWith("/#") && pathname === "/")
                       ? "text-primary font-semibold"
                       : "text-text-muted hover:text-primary"
                   }`}
                 >
                   {link.name}
-                </Link>
+                </a>
               );
             })}
             <Link href="/contact">
@@ -197,17 +214,20 @@ export default function Navigation() {
                       </AnimatePresence>
                     </div>
                   ) : (
-                    <Link
+                    <a
                       href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className={`block px-4 py-3 rounded-lg transition-colors ${
-                        isActive(link.href)
+                      onClick={(e) => {
+                        handleLinkClick(link.href, e);
+                        setIsOpen(false);
+                      }}
+                      className={`block px-4 py-3 rounded-lg transition-colors cursor-pointer ${
+                        isActive(link.href) || (link.href.startsWith("/#") && pathname === "/")
                           ? "text-primary font-semibold"
                           : "text-text-muted"
                       }`}
                     >
                       {link.name}
-                    </Link>
+                    </a>
                   )}
                 </div>
               ))}

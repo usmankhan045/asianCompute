@@ -44,7 +44,7 @@ export default function Problem() {
   return (
     <section
       ref={ref}
-      className="relative py-24 px-4 sm:px-6 lg:px-8 z-10"
+      className="relative py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
       id="problem"
     >
       <div className="max-w-7xl mx-auto">

@@ -7,6 +7,7 @@ import { ArrowUpRight, TrendingUp } from "lucide-react";
 
 const caseStudies = [
   {
+    id: "marketing-agency",
     client: "Marketing Agency",
     challenge: "Manual lead qualification was slow and inconsistent",
     solution: "Automated lead qualification system",
@@ -18,6 +19,7 @@ const caseStudies = [
     gradient: "from-primary/20 to-primary/5",
   },
   {
+    id: "online-coach",
     client: "Online Coach",
     challenge: "DMs overload preventing focus on high-value clients",
     solution: "AI DM assistant with smart routing",
@@ -29,6 +31,7 @@ const caseStudies = [
     gradient: "from-secondary/20 to-secondary/5",
   },
   {
+    id: "ecommerce-brand",
     client: "E-commerce Brand",
     challenge: "High cart abandonment with no recovery system",
     solution: "Abandoned cart AI system with personalized offers",
@@ -48,7 +51,7 @@ export default function CaseStudies() {
   return (
     <section
       ref={ref}
-      className="relative py-24 px-4 sm:px-6 lg:px-8 z-10"
+      className="relative py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
       id="case-studies"
     >
       <div className="max-w-7xl mx-auto">
@@ -78,7 +81,7 @@ export default function CaseStudies() {
               whileHover={{ y: -5 }}
               className="glass glass-hover rounded-2xl p-8 group cursor-pointer"
             >
-              <Link href="/case-studies">
+              <Link href={`/case-studies?case=${study.id}`}>
                 <div className="flex items-start justify-between mb-6">
                   <span className="px-3 py-1 rounded-full glass text-xs font-medium text-text-muted">
                     {study.client}
