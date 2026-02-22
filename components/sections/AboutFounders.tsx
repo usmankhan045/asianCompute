@@ -9,14 +9,14 @@ const founders = [
     name: "Muhammad Usman",
     role: "AI Systems Architect",
     bio: "Expert in building enterprise automation systems with AI. Specializes in creating scalable workflows that eliminate manual processes and drive revenue growth for businesses.",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://linkedin.com/in/muhammadusman80",
     gradient: "from-primary/20 to-primary/5",
   },
   {
     name: "Muhammad Awais",
     role: "Automation Strategy Lead",
     bio: "Growth strategist focused on revenue automation for agencies, coaches, and e-commerce brands. Designs intelligent systems that optimize lead flow and increase conversion rates.",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://linkedin.com/in/muhammad-awais-ashfaq-287359396",
     gradient: "from-secondary/20 to-secondary/5",
   },
 ];
