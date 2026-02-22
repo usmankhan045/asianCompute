@@ -40,25 +40,96 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="relative max-w-4xl mx-auto mb-12"
+          className="relative max-w-6xl mx-auto mb-12"
         >
-          {/* Background Image */}
-          <div className="absolute inset-0 rounded-2xl overflow-hidden opacity-20 z-0">
+          {/* Background Image with Gradient Overlay */}
+          <div className="absolute inset-0 rounded-3xl overflow-hidden opacity-15 z-0">
             <div 
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
               style={{
                 backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')",
-                filter: "blur(1px)",
+                filter: "blur(2px)",
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/30 to-accent/30" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-secondary/30 to-accent/40" />
           </div>
           
+          {/* Border Glow */}
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl opacity-20 blur-sm z-0" />
+          
           {/* Content */}
-          <div className="relative z-10 glass glass-hover rounded-2xl p-8 md:p-12 backdrop-blur-sm">
-            <p className="text-lg sm:text-xl lg:text-2xl text-text leading-relaxed">
-              We design intelligent workflows that automate your operations — from lead generation and follow-ups to client onboarding and internal processes. You get less manual work, lower costs, faster responses, and streamlined systems that consistently capture and manage opportunities — driving stronger revenue, higher profit margins, and scalable business growth while you focus on expansion.
-            </p>
+          <div className="relative z-10 glass glass-hover rounded-3xl p-8 md:p-12 lg:p-16 backdrop-blur-xl border border-white/20">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+              {/* Left Column */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="space-y-4"
+              >
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-primary text-lg">✓</span>
+                  </div>
+                  <p className="text-lg sm:text-xl text-text leading-relaxed pt-1">
+                    Intelligent workflows that automate operations from lead generation to client onboarding
+                  </p>
+                </div>
+                
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-secondary/20 to-secondary/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-secondary text-lg">✓</span>
+                  </div>
+                  <p className="text-lg sm:text-xl text-text leading-relaxed pt-1">
+                    Less manual work, lower costs, and faster response times
+                  </p>
+                </div>
+                
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-accent text-lg">✓</span>
+                  </div>
+                  <p className="text-lg sm:text-xl text-text leading-relaxed pt-1">
+                    Streamlined systems that consistently capture and manage opportunities
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Right Column */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="space-y-4"
+              >
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-primary/20 to-accent/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-primary text-lg">✓</span>
+                  </div>
+                  <p className="text-lg sm:text-xl text-text leading-relaxed pt-1">
+                    Drive stronger revenue and higher profit margins
+                  </p>
+                </div>
+                
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-secondary/20 to-primary/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-secondary text-lg">✓</span>
+                  </div>
+                  <p className="text-lg sm:text-xl text-text leading-relaxed pt-1">
+                    Scalable business growth while you focus on expansion
+                  </p>
+                </div>
+                
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-accent/20 to-secondary/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-accent text-lg">✓</span>
+                  </div>
+                  <p className="text-lg sm:text-xl text-text leading-relaxed pt-1">
+                    Automated internal processes that eliminate bottlenecks
+                  </p>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </motion.div>
 
@@ -103,9 +174,9 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Animated gradient background */}
+      {/* Gradient background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 animate-gradient" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20" />
       </div>
     </section>
   );

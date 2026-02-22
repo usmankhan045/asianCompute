@@ -24,10 +24,9 @@ const services = [
     id: "crm-automation",
     title: "Smart CRM & Pipeline Automation",
     description:
-      "n8n-powered workflows that sync data, update pipelines, and trigger actions automatically.",
+      "Intelligent workflows that sync data, update pipelines, and trigger actions automatically.",
     icon: Workflow,
     gradient: "from-secondary/20 to-secondary/5",
-    badge: "n8n Powered",
   },
   {
     id: "ai-chatbots",

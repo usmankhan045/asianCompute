@@ -8,7 +8,7 @@ const founders = [
   {
     name: "Muhammad Usman",
     role: "AI Systems Architect",
-    bio: "Expert in building enterprise automation systems with AI + n8n. Specializes in creating scalable workflows that eliminate manual processes and drive revenue growth for businesses.",
+    bio: "Expert in building enterprise automation systems with AI. Specializes in creating scalable workflows that eliminate manual processes and drive revenue growth for businesses.",
     linkedin: "https://linkedin.com",
     gradient: "from-primary/20 to-primary/5",
   },

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Blog | AsianCompute - AI Automation Insights",
-  description: "Read the latest insights on AI automation, n8n workflows, and revenue automation strategies.",
+  description: "Read the latest insights on AI automation, intelligent workflows, and revenue automation strategies.",
 };
 
 export default function BlogPage() {
@@ -25,7 +25,7 @@ export default function BlogPage() {
           <div className="glass glass-hover rounded-2xl p-12">
             <p className="text-text-muted mb-6">
               Our blog is coming soon! Check back for the latest insights on AI
-              automation, n8n workflows, and revenue optimization strategies.
+              automation, intelligent workflows, and revenue optimization strategies.
             </p>
             <Link href="/contact">
               <button className="px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover">

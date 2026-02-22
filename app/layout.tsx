@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "AsianCompute | AI Growth Automation Agency | Revenue Automation Systems",
-  description: "We build intelligent automation systems using AI + n8n that eliminate manual work, optimize lead flow, and increase conversion rates for agencies, coaches, and e-commerce brands.",
-  keywords: "AI automation, n8n automation, revenue automation, lead automation, e-commerce AI, business automation, AsianCompute",
+  description: "We build intelligent automation systems using AI that eliminate manual work, optimize lead flow, and increase conversion rates for agencies, coaches, and e-commerce brands.",
+  keywords: "AI automation, revenue automation, lead automation, e-commerce AI, business automation, AsianCompute",
 };
 
 export default function RootLayout({

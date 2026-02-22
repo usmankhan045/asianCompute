@@ -37,7 +37,7 @@ export default function AboutPage() {
             <p className="text-lg text-text-muted leading-relaxed mb-6">
               At AsianCompute, we believe that every business should be able to
               scale without being limited by manual processes. We build
-              intelligent automation systems using AI + n8n that eliminate
+              intelligent automation systems using AI that eliminate
               repetitive work, optimize lead flow, and increase conversion rates.
             </p>
             <p className="text-lg text-text-muted leading-relaxed">

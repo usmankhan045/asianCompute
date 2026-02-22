@@ -16,9 +16,9 @@ const steps = [
     number: "02",
     title: "AI System Architecture",
     description:
-      "Built with n8n + AI, we design and develop custom automation workflows tailored to your business model and goals.",
+      "Built with AI, we design and develop custom automation workflows tailored to your business model and goals.",
     icon: Code,
-    badge: "Built with n8n + AI",
+    badge: "AI-Powered",
   },
   {
     number: "03",

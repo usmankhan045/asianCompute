@@ -27,7 +27,7 @@ const serviceDetails = [
     id: "crm-automation",
     title: "Smart CRM & Pipeline Automation",
     description:
-      "n8n-powered workflows that sync data, update pipelines, and trigger actions automatically.",
+      "Intelligent workflows that sync data, update pipelines, and trigger actions automatically.",
     features: [
       "Automated data synchronization across platforms",
       "Pipeline updates based on lead behavior",
@@ -36,7 +36,6 @@ const serviceDetails = [
       "Custom workflow creation for your business",
     ],
     icon: "⚙️",
-    badge: "n8n Powered",
   },
   {
     id: "ai-chatbots",
@@ -160,7 +159,7 @@ function ServicesContent() {
           </h1>
           <p className="text-xl text-text-muted leading-relaxed mb-8">
             Intelligent automation systems that work while you sleep. Built with
-            AI + n8n to scale your revenue automatically.
+            AI to scale your revenue automatically.
           </p>
           <Link href="/#contact">
             <button className="px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover">

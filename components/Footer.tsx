@@ -60,7 +60,7 @@ export default function Footer() {
               </h3>
               <p className="text-text-muted mb-6 leading-relaxed">
                 Building intelligent automation systems that scale your revenue
-                automatically. AI + n8n powered solutions for agencies, coaches,
+                automatically. AI-powered solutions for agencies, coaches,
                 and e-commerce brands.
               </p>
               <div className="space-y-3">
@@ -190,7 +190,7 @@ export default function Footer() {
                 © {currentYear} AsianCompute. All rights reserved.
               </p>
               <p className="mt-1">
-                Built with AI + n8n automation systems.
+                Built with AI automation systems.
               </p>
             </div>
           </div>
