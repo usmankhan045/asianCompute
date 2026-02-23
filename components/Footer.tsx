@@ -38,9 +38,6 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: Linkedin, href: "https://linkedin.com/company/asiancompute", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com/asiancompute", label: "Twitter" },
-    { icon: Github, href: "https://github.com/asiancompute", label: "GitHub" },
-    { icon: Facebook, href: "https://facebook.com/asiancompute", label: "Facebook" },
   ];
 
   return (
@@ -72,11 +69,11 @@ export default function Footer() {
                   <span>info@asiancompute.com</span>
                 </a>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+923149045550"
                   className="flex items-center gap-3 text-text-muted hover:text-primary transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>+1 (234) 567-890</span>
+                  <span>+92 314 904 5550 <br /> +92 318 468 6890</span>
                 </a>
                 <div className="flex items-start gap-3 text-text-muted">
                   <MapPin className="w-4 h-4 mt-1" />
@@ -190,7 +187,7 @@ export default function Footer() {
                 © {currentYear} AsianCompute. All rights reserved.
               </p>
               <p className="mt-1">
-                Built with AI automation systems.
+              
               </p>
             </div>
           </div>

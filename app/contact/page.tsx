@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import BackgroundGrid from "@/components/BackgroundGrid";
 import FloatingShapes from "@/components/FloatingShapes";
+import WorkflowGallery from "@/components/sections/WorkflowGallery";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 
 export default function ContactPage() {
@@ -49,6 +50,9 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
+
+      {/* Workflow Gallery */}
+      <WorkflowGallery />
 
       {/* Contact Section */}
       <section className="relative py-16 px-4 sm:px-6 lg:px-8 z-10">

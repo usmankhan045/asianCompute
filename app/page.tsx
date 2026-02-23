@@ -17,6 +17,9 @@ const HowItWorks = dynamic(() => import("@/components/sections/HowItWorks"), {
 const Results = dynamic(() => import("@/components/sections/Results"), {
   loading: () => null,
 });
+const Workflows = dynamic(() => import("@/components/sections/Workflows"), {
+  loading: () => null,
+});
 const CaseStudies = dynamic(() => import("@/components/sections/CaseStudies"), {
   loading: () => null,
 });
@@ -42,6 +45,7 @@ export default function Home() {
       <Services />
       <HowItWorks />
       <Results />
+      <Workflows />
       <CaseStudies />
       <AboutFounders />
       <Testimonials />

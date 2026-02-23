@@ -48,10 +48,92 @@ export default function Problem() {
       id="problem"
     >
       <div className="max-w-7xl mx-auto">
+        {/* Description Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
+          className="mb-16"
+        >
+          <div className="glass glass-hover rounded-3xl p-8 md:p-12 lg:p-16 backdrop-blur-xl border border-white/20">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+              {/* Left Column */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="space-y-4"
+              >
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-primary text-lg">✓</span>
+                  </div>
+                  <p className="text-lg sm:text-xl text-text leading-relaxed pt-1 text-justify">
+                    Intelligent workflows that automate operations from lead generation to client onboarding
+                  </p>
+                </div>
+                
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-secondary/20 to-secondary/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-secondary text-lg">✓</span>
+                  </div>
+                  <p className="text-lg sm:text-xl text-text leading-relaxed pt-1 text-justify">
+                    Less manual work, lower costs, and faster response times
+                  </p>
+                </div>
+                
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-accent text-lg">✓</span>
+                  </div>
+                  <p className="text-lg sm:text-xl text-text leading-relaxed pt-1 text-justify">
+                    Streamlined systems that consistently capture and manage opportunities
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Right Column */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="space-y-4"
+              >
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-primary/20 to-accent/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-primary text-lg">✓</span>
+                  </div>
+                  <p className="text-lg sm:text-xl text-text leading-relaxed pt-1 text-justify">
+                    Drive stronger revenue and higher profit margins
+                  </p>
+                </div>
+                
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-secondary/20 to-primary/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-secondary text-lg">✓</span>
+                  </div>
+                  <p className="text-lg sm:text-xl text-text leading-relaxed pt-1 text-justify">
+                    Scalable business growth while you focus on expansion
+                  </p>
+                </div>
+                
+                <div className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-accent/20 to-secondary/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span className="text-accent text-lg">✓</span>
+                  </div>
+                  <p className="text-lg sm:text-xl text-text leading-relaxed pt-1 text-justify">
+                    Automated internal processes that eliminate bottlenecks
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">

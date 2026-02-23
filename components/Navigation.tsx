@@ -65,18 +65,7 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="text-2xl font-bold gradient-text"
-            >
-              AsianCompute
-            </motion.div>
-          </Link>
-
+        <div className="relative flex items-center justify-center h-20">
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => {
@@ -153,7 +142,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-text p-2"
+            className="lg:hidden absolute left-4 text-text p-2"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
