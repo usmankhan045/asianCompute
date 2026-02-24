@@ -44,7 +44,7 @@ export default function Problem() {
   return (
     <section
       ref={ref}
-      className="relative py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
+      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
       id="problem"
     >
       <div className="max-w-7xl mx-auto">
@@ -55,7 +55,7 @@ export default function Problem() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <div className="glass glass-hover rounded-3xl p-8 md:p-12 lg:p-16 backdrop-blur-xl border border-white/20">
+          <div className="glass glass-hover rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 lg:p-16 backdrop-blur-xl border border-white/20">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12">
               {/* Left Column */}
               <motion.div
@@ -136,11 +136,11 @@ export default function Problem() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Still Managing Everything{" "}
             <span className="gradient-text">Manually?</span>
           </h2>
-          <p className="text-xl text-text-muted max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-text-muted max-w-2xl mx-auto">
             Stop losing revenue to inefficient processes. Here's what's
             holding you back:
           </p>
@@ -159,7 +159,7 @@ export default function Problem() {
                     : { opacity: 0, y: 30 }
                 }
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="glass glass-hover rounded-2xl p-8"
+                className="glass glass-hover rounded-2xl p-5 sm:p-8"
               >
                 <div
                   className={`w-16 h-16 rounded-xl bg-gradient-to-br ${problem.color} flex items-center justify-center mb-6`}

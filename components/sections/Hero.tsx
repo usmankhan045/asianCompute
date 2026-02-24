@@ -21,7 +21,7 @@ export default function Hero() {
       </div>
 
       {/* Left Content (Perfect Vertical Center) */}
-      <div className="absolute top-1/2 -translate-y-1/2 left-6 sm:left-12 lg:left-24 max-w-4xl z-10">
+      <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 sm:left-12 sm:right-auto lg:left-24 max-w-4xl z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold gradient-text mb-4 tracking-tight leading-none"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold gradient-text mb-3 sm:mb-4 tracking-tight leading-none"
           >
             AsianCompute
           </motion.h1>
@@ -40,7 +40,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-text leading-tight"
+            className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-text leading-tight"
           >
             Make Your Business Smart
           </motion.h2>

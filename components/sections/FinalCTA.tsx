@@ -12,7 +12,7 @@ export default function FinalCTA() {
   return (
     <section
       ref={ref}
-      className="relative py-32 px-4 sm:px-6 lg:px-8 z-10 overflow-hidden scroll-mt-20"
+      className="relative py-20 sm:py-32 px-4 sm:px-6 lg:px-8 z-10 overflow-hidden scroll-mt-20"
       id="contact"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10" />
@@ -37,7 +37,7 @@ export default function FinalCTA() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
         >
           Stop Working In Your Business.
           <br />
@@ -48,7 +48,7 @@ export default function FinalCTA() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl sm:text-2xl text-text-muted max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-base sm:text-xl md:text-2xl text-text-muted max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed"
         >
           Book a free automation strategy call and discover how intelligent
           systems can scale your revenue.
@@ -61,7 +61,7 @@ export default function FinalCTA() {
         >
           <Link href="/contact">
             <motion.button
-              className="group relative px-10 py-5 bg-gradient-to-r from-primary via-secondary to-accent text-white font-bold text-lg rounded-lg glow-effect-hover overflow-hidden"
+              className="group relative px-6 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-primary via-secondary to-accent text-white font-bold text-base sm:text-lg rounded-lg glow-effect-hover overflow-hidden"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -83,7 +83,7 @@ export default function FinalCTA() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 flex flex-wrap justify-center gap-8 text-text-muted text-sm"
+          className="mt-10 sm:mt-16 flex flex-wrap justify-center gap-4 sm:gap-8 text-text-muted text-xs sm:text-sm"
         >
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />

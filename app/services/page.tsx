@@ -92,7 +92,7 @@ function ServicesContent() {
         <BackgroundGrid />
         <FloatingShapes />
 
-        <section className="relative py-24 px-4 sm:px-6 lg:px-8 z-10">
+        <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10">
           <div className="max-w-4xl mx-auto">
             <Link href="/services" className="inline-flex items-center gap-2 text-text-muted hover:text-primary mb-8 transition-colors">
               <ArrowLeft className="w-4 h-4" />
@@ -104,15 +104,15 @@ function ServicesContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               id={selectedService.id}
-              className="glass glass-hover rounded-2xl p-8 md:p-12"
+              className="glass glass-hover rounded-2xl p-5 sm:p-8 md:p-12"
             >
-              <div className="flex items-start gap-6 mb-6">
-                <div className="text-5xl">{selectedService.icon}</div>
+              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-6">
+                <div className="text-4xl sm:text-5xl">{selectedService.icon}</div>
                 <div className="flex-1">
                   <div className="flex items-center gap-4 mb-4">
-                    <h1 className="text-4xl font-bold">{selectedService.title}</h1>
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">{selectedService.title}</h1>
                   </div>
-                  <p className="text-xl text-text-muted mb-8">
+                  <p className="text-base sm:text-xl text-text-muted mb-8">
                     {selectedService.description}
                   </p>
                 </div>
@@ -147,17 +147,17 @@ function ServicesContent() {
       <BackgroundGrid />
       <FloatingShapes />
 
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 z-10">
+      <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl sm:text-6xl font-bold mb-6">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6">
             Our <span className="gradient-text">Services</span>
           </h1>
-          <p className="text-xl text-text-muted leading-relaxed mb-8">
+          <p className="text-base sm:text-xl text-text-muted leading-relaxed mb-8">
             Intelligent automation systems that work while you sleep. Built with
             AI to scale your revenue automatically.
           </p>
           <Link href="/#contact">
-            <button className="px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover">
+            <button className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover">
               Get Started Today
             </button>
           </Link>
@@ -166,23 +166,23 @@ function ServicesContent() {
 
       <section className="relative py-16 px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
             Service <span className="gradient-text">Details</span>
           </h2>
-          <div className="space-y-16">
+          <div className="space-y-10 sm:space-y-16">
             {serviceDetails.map((service, index) => (
               <div
                 key={service.id}
                 id={service.id}
-                className="scroll-mt-20 glass glass-hover rounded-2xl p-8 md:p-12"
+                className="scroll-mt-20 glass glass-hover rounded-2xl p-5 sm:p-8 md:p-12"
               >
-                <div className="flex items-start gap-6 mb-6">
-                  <div className="text-5xl">{service.icon}</div>
+                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-6">
+                  <div className="text-4xl sm:text-5xl">{service.icon}</div>
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-4">
-                      <h3 className="text-3xl font-bold">{service.title}</h3>
+                      <h3 className="text-2xl sm:text-3xl font-bold">{service.title}</h3>
                     </div>
-                    <p className="text-xl text-text-muted mb-6">
+                    <p className="text-base sm:text-xl text-text-muted mb-6">
                       {service.description}
                     </p>
                   </div>
@@ -205,11 +205,11 @@ function ServicesContent() {
       </section>
 
       <section className="relative py-16 px-4 sm:px-6 lg:px-8 z-10">
-        <div className="max-w-4xl mx-auto text-center glass glass-hover rounded-2xl p-12">
-          <h2 className="text-3xl font-bold mb-4">
+        <div className="max-w-4xl mx-auto text-center glass glass-hover rounded-2xl p-6 sm:p-12">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Ready to Automate Your Revenue?
           </h2>
-          <p className="text-xl text-text-muted mb-8">
+          <p className="text-base sm:text-xl text-text-muted mb-8">
             Book a free strategy call and discover how intelligent systems can
             scale your business.
           </p>

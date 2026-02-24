@@ -53,7 +53,7 @@ export default function Services() {
   return (
     <section
       ref={ref}
-      className="relative py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
+      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
       id="services"
     >
       <div className="max-w-7xl mx-auto">
@@ -63,11 +63,11 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Revenue Automation{" "}
             <span className="gradient-text">Systems</span>
           </h2>
-          <p className="text-xl text-text-muted max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-text-muted max-w-2xl mx-auto">
             Intelligent workflows that work while you sleep
           </p>
         </motion.div>
@@ -86,7 +86,7 @@ export default function Services() {
                 }
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="glass glass-hover rounded-2xl p-8 group cursor-pointer"
+                className="glass glass-hover rounded-2xl p-5 sm:p-8 group cursor-pointer"
               >
                 <div className="flex items-start justify-between mb-6">
                   <div

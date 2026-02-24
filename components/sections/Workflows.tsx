@@ -62,7 +62,7 @@ export default function Workflows() {
   return (
     <section
       ref={ref}
-      className="relative py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
+      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
       id="workflows"
     >
       <div className="max-w-7xl mx-auto">
@@ -81,16 +81,16 @@ export default function Workflows() {
           >
             ⚡ Live Automation Examples
           </motion.span>
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Real <span className="gradient-text">Workflows</span> We Build
           </h2>
-          <p className="text-xl text-text-muted max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-text-muted max-w-2xl mx-auto">
             Battle-tested automation systems running in production — click any workflow to explore it in detail
           </p>
         </motion.div>
 
         {/* Workflow Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-5 sm:gap-8">
           {workflows.map((workflow, index) => (
             <motion.div
               key={workflow.id}
@@ -102,7 +102,7 @@ export default function Workflows() {
               onClick={() => setActiveModal(workflow.id)}
             >
               {/* Workflow Image Preview */}
-              <div className="relative h-52 overflow-hidden bg-white/5">
+              <div className="relative h-40 sm:h-52 overflow-hidden bg-white/5">
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center"
                   style={{
@@ -126,9 +126,9 @@ export default function Workflows() {
               </div>
 
               {/* Workflow Info */}
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
+              <div className="p-4 sm:p-6">
+                <div className="flex items-start justify-between mb-2 sm:mb-3">
+                  <h3 className="text-base sm:text-xl font-bold group-hover:text-primary transition-colors">
                     {workflow.title}
                   </h3>
                   <ArrowRight className="w-5 h-5 text-text-muted group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0 mt-0.5" />
@@ -202,7 +202,7 @@ export default function Workflows() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[200] flex items-center justify-center p-4 pt-24"
+          className="fixed inset-0 z-[200] flex items-center justify-center p-3 sm:p-4 pt-20 sm:pt-24"
           onClick={() => setActiveModal(null)}
         >
           {/* Backdrop */}
@@ -213,7 +213,7 @@ export default function Workflows() {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="relative w-full max-w-5xl glass rounded-2xl overflow-hidden border border-white/10"
+            className="relative w-full max-w-5xl max-h-[85vh] overflow-y-auto glass rounded-2xl border border-white/10"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
@@ -225,7 +225,7 @@ export default function Workflows() {
             </button>
 
             {/* Full Image */}
-            <div className="relative w-full bg-white" style={{ height: "52vh" }}>
+            <div className="relative w-full bg-white h-[35vh] sm:h-[52vh]">
               <Image
                 src={activeWorkflow.image}
                 alt={activeWorkflow.title}
@@ -236,10 +236,10 @@ export default function Workflows() {
             </div>
 
             {/* Modal Info */}
-            <div className="p-5 border-t border-white/10">
+            <div className="p-4 sm:p-5 border-t border-white/10">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-xl font-bold mb-1">{activeWorkflow.title}</h3>
+                  <h3 className="text-lg sm:text-xl font-bold mb-1">{activeWorkflow.title}</h3>
                   <p className="text-text-muted text-sm leading-relaxed line-clamp-2">{activeWorkflow.description}</p>
                 </div>
                 <a href="/contact" onClick={() => setActiveModal(null)} className="flex-shrink-0">

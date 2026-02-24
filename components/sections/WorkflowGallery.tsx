@@ -81,16 +81,16 @@ export default function WorkflowGallery() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Automation <span className="gradient-text">Workflows</span>
           </h2>
-          <p className="text-xl text-text-muted max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-text-muted max-w-3xl mx-auto">
             A few real workflow examples that blend triggers, AI reasoning, and
             multi-step routing to create reliable business automation.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {items.map((item, idx) => (
             <motion.button
               key={item.src}
@@ -170,11 +170,11 @@ export default function WorkflowGallery() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.98 }}
               transition={{ duration: 0.2 }}
-              className="relative w-full max-w-6xl glass rounded-2xl overflow-hidden border border-white/15"
+              className="relative w-full max-w-6xl max-h-[85vh] overflow-y-auto glass rounded-2xl border border-white/15"
             >
-              <div className="flex items-center justify-between px-4 sm:px-6 py-4 border-b border-white/10">
-                <div className="min-w-0">
-                  <div className="text-lg sm:text-xl font-bold truncate">
+              <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-white/10">
+                <div className="min-w-0 pr-2">
+                  <div className="text-base sm:text-xl font-bold truncate">
                     {active.title}
                   </div>
                   <div className="text-sm text-text-muted truncate">
@@ -229,7 +229,7 @@ export default function WorkflowGallery() {
                       i === null ? null : (i - 1 + items.length) % items.length
                     )
                   }
-                  className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-xl glass-hover border border-white/10"
+                  className="absolute left-1 sm:left-3 top-1/2 -translate-y-1/2 p-1.5 sm:p-2 rounded-xl glass-hover border border-white/10"
                   aria-label="Previous image"
                 >
                   <ChevronLeft className="w-5 h-5" />
@@ -241,7 +241,7 @@ export default function WorkflowGallery() {
                       i === null ? null : (i + 1) % items.length
                     )
                   }
-                  className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-xl glass-hover border border-white/10"
+                  className="absolute right-1 sm:right-3 top-1/2 -translate-y-1/2 p-1.5 sm:p-2 rounded-xl glass-hover border border-white/10"
                   aria-label="Next image"
                 >
                   <ChevronRight className="w-5 h-5" />

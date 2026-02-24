@@ -79,7 +79,7 @@ export default function Results() {
   return (
     <section
       ref={ref}
-      className="relative py-24 px-4 sm:px-6 lg:px-8 z-10"
+      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10"
       id="results"
     >
       <div className="max-w-7xl mx-auto">
@@ -89,15 +89,15 @@ export default function Results() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Proven <span className="gradient-text">Results</span>
           </h2>
-          <p className="text-xl text-text-muted max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-text-muted max-w-2xl mx-auto">
             Real metrics from businesses we've automated
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
           {results.map((result, index) => {
             const Icon = result.icon;
             const numericValue = parseFloat(result.metric);
@@ -117,14 +117,14 @@ export default function Results() {
                     : { opacity: 0, y: 30 }
                 }
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="glass glass-hover rounded-2xl p-8 text-center"
+                className="glass glass-hover rounded-2xl p-4 sm:p-8 text-center"
               >
                 <div
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${result.color} flex items-center justify-center mx-auto mb-6`}
+                  className={`w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br ${result.color} flex items-center justify-center mx-auto mb-3 sm:mb-6`}
                 >
-                  <Icon className="w-8 h-8 text-white" />
+                  <Icon className="w-5 h-5 sm:w-8 sm:h-8 text-white" />
                 </div>
-                <div className="text-5xl font-bold gradient-text mb-4">
+                <div className="text-2xl sm:text-5xl font-bold gradient-text mb-2 sm:mb-4">
                   {result.metric.includes("x") ? (
                     <AnimatedCounter
                       value={numericValue}
@@ -141,7 +141,7 @@ export default function Results() {
                     result.metric
                   )}
                 </div>
-                <p className="text-text-muted text-lg">{result.label}</p>
+                <p className="text-text-muted text-xs sm:text-lg">{result.label}</p>
               </motion.div>
             );
           })}

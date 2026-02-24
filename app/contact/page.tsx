@@ -39,12 +39,12 @@ export default function ContactPage() {
       <FloatingShapes />
 
       {/* Hero Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 z-10">
+      <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl sm:text-6xl font-bold mb-6">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6">
             Get In <span className="gradient-text">Touch</span>
           </h1>
-          <p className="text-xl text-text-muted leading-relaxed">
+          <p className="text-base sm:text-xl text-text-muted leading-relaxed">
             Ready to automate your revenue? Book a free strategy call and
             discover how intelligent systems can scale your business.
           </p>
@@ -57,16 +57,16 @@ export default function ContactPage() {
       {/* Contact Section */}
       <section className="relative py-16 px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="glass glass-hover rounded-2xl p-8 md:p-12"
+              className="glass glass-hover rounded-2xl p-5 sm:p-8 md:p-12"
             >
-              <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6">Send Us a Message</h2>
               {submitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -190,8 +190,8 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-8"
             >
-              <div className="glass glass-hover rounded-2xl p-8">
-                <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
+              <div className="glass glass-hover rounded-2xl p-5 sm:p-8">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-6">Contact Information</h2>
                 <div className="space-y-6">
                   <a
                     href="mailto:info@asiancompute.com"
@@ -223,8 +223,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="glass glass-hover rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-4">Why Choose Us?</h3>
+              <div className="glass glass-hover rounded-2xl p-5 sm:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4">Why Choose Us?</h3>
                 <ul className="space-y-3 text-text-muted">
                   <li className="flex items-start gap-3">
                     <span className="text-primary mt-1">✓</span>

@@ -51,7 +51,7 @@ export default function CaseStudies() {
   return (
     <section
       ref={ref}
-      className="relative py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
+      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
       id="case-studies"
     >
       <div className="max-w-7xl mx-auto">
@@ -61,15 +61,15 @@ export default function CaseStudies() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Real <span className="gradient-text">Case Studies</span>
           </h2>
-          <p className="text-xl text-text-muted max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-text-muted max-w-2xl mx-auto">
             See how automation transformed these businesses
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-8">
           {caseStudies.map((study, index) => (
             <motion.div
               key={study.client}
@@ -79,7 +79,7 @@ export default function CaseStudies() {
               }
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="glass glass-hover rounded-2xl p-8 group cursor-pointer"
+              className="glass glass-hover rounded-2xl p-5 sm:p-8 group cursor-pointer"
             >
               <Link href={`/case-studies?case=${study.id}`}>
                 <div className="flex items-start justify-between mb-6">
@@ -94,13 +94,13 @@ export default function CaseStudies() {
               <p className="text-text-muted text-sm mb-6">{study.solution}</p>
 
               <div
-                className={`rounded-xl p-6 bg-gradient-to-br ${study.gradient} mb-6`}
+                className={`rounded-xl p-4 sm:p-6 bg-gradient-to-br ${study.gradient} mb-6`}
               >
                 <div className="flex items-center gap-2 mb-2">
                   <TrendingUp className="w-5 h-5 text-primary" />
                   <span className="text-sm text-text-muted">{study.metric}</span>
                 </div>
-                <div className="text-4xl font-bold gradient-text mb-1">
+                <div className="text-3xl sm:text-4xl font-bold gradient-text mb-1">
                   {study.result}
                 </div>
                 <p className="text-sm text-text-muted">{study.resultLabel}</p>
