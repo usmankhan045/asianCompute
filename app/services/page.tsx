@@ -111,11 +111,6 @@ function ServicesContent() {
                 <div className="flex-1">
                   <div className="flex items-center gap-4 mb-4">
                     <h1 className="text-4xl font-bold">{selectedService.title}</h1>
-                    {selectedService.badge && (
-                      <span className="px-3 py-1 rounded-full glass text-sm font-medium text-secondary">
-                        {selectedService.badge}
-                      </span>
-                    )}
                   </div>
                   <p className="text-xl text-text-muted mb-8">
                     {selectedService.description}
@@ -186,11 +181,6 @@ function ServicesContent() {
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-4">
                       <h3 className="text-3xl font-bold">{service.title}</h3>
-                      {service.badge && (
-                        <span className="px-3 py-1 rounded-full glass text-sm font-medium text-secondary">
-                          {service.badge}
-                        </span>
-                      )}
                     </div>
                     <p className="text-xl text-text-muted mb-6">
                       {service.description}

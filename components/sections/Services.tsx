@@ -94,11 +94,6 @@ export default function Services() {
                   >
                     <Icon className="w-8 h-8 text-primary" />
                   </div>
-                  {service.badge && (
-                    <span className="px-3 py-1 rounded-full glass text-xs font-medium text-secondary">
-                      {service.badge}
-                    </span>
-                  )}
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                 <p className="text-text-muted mb-6 leading-relaxed">
