@@ -30,6 +30,7 @@ export async function POST(req: NextRequest) {
       port,
       secure: port === 465,
       auth: {
+        type: "LOGIN",
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
