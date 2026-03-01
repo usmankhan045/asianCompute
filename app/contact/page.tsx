@@ -16,15 +16,38 @@ export default function ContactPage() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", email: "", company: "", phone: "", message: "" });
-    }, 3000);
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Something went wrong.");
+      }
+
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: "", email: "", company: "", phone: "", message: "" });
+      }, 5000);
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : "Failed to send message. Please try again.";
+      setError(message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (
@@ -73,7 +96,7 @@ export default function ContactPage() {
                   <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
                   <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
                   <p className="text-text-muted">
-                    We'll get back to you within 24 hours.
+                    We've sent a confirmation to your email. Our team will get back to you within 24 hours.
                   </p>
                 </motion.div>
               ) : (
@@ -166,14 +189,32 @@ export default function ContactPage() {
                       placeholder="Tell us about your automation needs..."
                     />
                   </div>
+                  {error && (
+                    <div className="p-4 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-sm">
+                      {error}
+                    </div>
+                  )}
                   <motion.button
                     type="submit"
-                    className="w-full px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover flex items-center justify-center gap-2"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                    disabled={loading}
+                    className="w-full px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                    whileHover={loading ? {} : { scale: 1.02 }}
+                    whileTap={loading ? {} : { scale: 0.98 }}
                   >
-                    <Send className="w-5 h-5" />
-                    Send Message
+                    {loading ? (
+                      <>
+                        <svg className="animate-spin w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5" />
+                        Send Message
+                      </>
+                    )}
                   </motion.button>
                 </form>
               )}
