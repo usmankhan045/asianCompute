@@ -232,13 +232,13 @@ export default function ContactPage() {
                 <h2 className="text-2xl sm:text-3xl font-bold mb-6">Contact Information</h2>
                 <div className="space-y-6">
                   <a
-                    href="mailto:info@asiancompute.com"
+                    href="mailto:info@asiancompute.tech"
                     className="flex items-start gap-4 text-text-muted hover:text-primary transition-colors"
                   >
                     <Mail className="w-6 h-6 text-primary mt-1" />
                     <div>
                       <div className="font-medium text-text">Email</div>
-                      <div>info@asiancompute.com</div>
+                      <div>info@asiancompute.tech</div>
                     </div>
                   </a>
                   <a

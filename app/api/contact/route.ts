@@ -12,26 +12,26 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
-      console.error("Missing SMTP environment variables:", {
-        SMTP_HOST: !!process.env.SMTP_HOST,
-        SMTP_USER: !!process.env.SMTP_USER,
-        SMTP_PASS: !!process.env.SMTP_PASS,
+    if (!process.env.EMAIL_HOST || !process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      console.error("Missing email environment variables:", {
+        EMAIL_HOST: !!process.env.EMAIL_HOST,
+        EMAIL_USER: !!process.env.EMAIL_USER,
+        EMAIL_PASS: !!process.env.EMAIL_PASS,
       });
       return NextResponse.json(
-        { error: "Email service is not configured. Please contact us directly at info@asiancompute.com" },
+        { error: "Email service is not configured. Please contact us directly at info@asiancompute.tech" },
         { status: 500 }
       );
     }
 
-    const port = Number(process.env.SMTP_PORT) || 465;
+    const port = Number(process.env.EMAIL_PORT) || 465;
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
+      host: process.env.EMAIL_HOST,
       port,
       secure: port === 465,
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
       tls: {
         rejectUnauthorized: false,
@@ -41,10 +41,10 @@ export async function POST(req: NextRequest) {
     // Verify SMTP connection
     await transporter.verify();
 
-    // 1. Send notification email to info@asiancompute.com
+    // 1. Send notification email to info@asiancompute.tech
     await transporter.sendMail({
-      from: `"AsianCompute Website" <${process.env.SMTP_USER}>`,
-      to: "info@asiancompute.com",
+      from: `"AsianCompute Website" <${process.env.EMAIL_USER}>`,
+      to: "info@asiancompute.tech",
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
@@ -77,7 +77,7 @@ export async function POST(req: NextRequest) {
 
     // 2. Send automated professional reply to the user
     await transporter.sendMail({
-      from: `"AsianCompute" <${process.env.SMTP_USER}>`,
+      from: `"AsianCompute" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: "Thank You for Contacting AsianCompute - We've Received Your Message",
       html: `
@@ -127,7 +127,7 @@ export async function POST(req: NextRequest) {
             </p>
             <p style="color: #374151; font-size: 15px; line-height: 1.7;">
               <strong>Phone:</strong> +92 314 904 5550 | +92 318 468 6890<br />
-              <strong>Email:</strong> <a href="mailto:info@asiancompute.com" style="color: #6366f1;">info@asiancompute.com</a>
+              <strong>Email:</strong> <a href="mailto:info@asiancompute.tech" style="color: #6366f1;">info@asiancompute.tech</a>
             </p>
 
             <p style="color: #374151; font-size: 15px; line-height: 1.7;">

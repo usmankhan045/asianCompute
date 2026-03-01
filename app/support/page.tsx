@@ -32,10 +32,10 @@ export default function SupportPage() {
                 Send us an email and we'll get back to you within 24 hours.
               </p>
               <a
-                href="mailto:support@asiancompute.com"
+                href="mailto:support@asiancompute.tech"
                 className="text-primary hover:text-secondary transition-colors font-medium"
               >
-                support@asiancompute.com →
+                support@asiancompute.tech →
               </a>
             </div>
 

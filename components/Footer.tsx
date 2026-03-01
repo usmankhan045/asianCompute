@@ -62,11 +62,11 @@ export default function Footer() {
               </p>
               <div className="space-y-3">
                 <a
-                  href="mailto:info@asiancompute.com"
+                  href="mailto:info@asiancompute.tech"
                   className="flex items-center gap-3 text-text-muted hover:text-primary transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  <span>info@asiancompute.com</span>
+                  <span>info@asiancompute.tech</span>
                 </a>
                 <a
                   href="tel:+923149045550"
