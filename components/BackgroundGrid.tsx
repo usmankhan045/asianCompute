@@ -2,14 +2,12 @@
 
 export default function BackgroundGrid() {
   return (
-    <div className="fixed inset-0 z-0 opacity-20">
+    <div className="fixed inset-0 z-0" style={{ opacity: 0.6 }}>
       <div
         className="h-full w-full"
         style={{
-          backgroundImage:
-            "linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)",
-          backgroundSize: "50px 50px",
-          willChange: "auto",
+          backgroundImage: "radial-gradient(circle, rgba(61, 181, 74, 0.18) 1px, transparent 1px)",
+          backgroundSize: "32px 32px",
         }}
       />
     </div>

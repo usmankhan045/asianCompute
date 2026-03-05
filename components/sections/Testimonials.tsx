@@ -43,7 +43,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10" id="testimonials">
+    <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 bg-white" id="testimonials">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ export default function Testimonials() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Client <span className="gradient-text">Testimonials</span>
           </h2>
-          <p className="text-base sm:text-xl text-text-muted max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-500 max-w-2xl mx-auto">
             Hear from businesses that transformed with automation
           </p>
         </motion.div>
@@ -74,7 +74,7 @@ export default function Testimonials() {
                     className="glass glass-hover rounded-2xl p-5 sm:p-8 absolute inset-0"
                   >
                     <Quote className="w-8 h-8 sm:w-12 sm:h-12 text-primary/30 mb-4 sm:mb-6" />
-                    <p className="text-base sm:text-xl text-text leading-relaxed mb-6 sm:mb-8">
+                    <p className="text-base sm:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8">
                       "{testimonial.content}"
                     </p>
                     <div className="flex items-center gap-3 sm:gap-4">
@@ -84,8 +84,8 @@ export default function Testimonials() {
                         </span>
                       </div>
                       <div>
-                        <div className="font-bold text-base sm:text-lg">{testimonial.name}</div>
-                        <div className="text-text-muted text-sm sm:text-base">
+                        <div className="font-bold text-base sm:text-lg text-gray-900">{testimonial.name}</div>
+                        <div className="text-gray-500 text-sm sm:text-base">
                           {testimonial.role} at {testimonial.company}
                         </div>
                       </div>
@@ -101,11 +101,10 @@ export default function Testimonials() {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                index === currentIndex
+              className={`w-2 h-2 rounded-full transition-all ${index === currentIndex
                   ? "bg-primary w-8"
-                  : "bg-text-muted/30"
-              }`}
+                  : "bg-gray-300"
+                }`}
             />
           ))}
         </div>

@@ -41,7 +41,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative border-t border-white/10 bg-background/50 backdrop-blur-sm z-10">
+    <footer className="relative border-t border-black/8 bg-gray-50 z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
@@ -55,7 +55,7 @@ export default function Footer() {
               <h3 className="text-2xl font-bold gradient-text mb-4">
                 AsianCompute
               </h3>
-              <p className="text-text-muted mb-6 leading-relaxed">
+              <p className="text-gray-500 mb-6 leading-relaxed">
                 Building intelligent automation systems that scale your revenue
                 automatically. AI-powered solutions for agencies, coaches,
                 and e-commerce brands.
@@ -63,19 +63,19 @@ export default function Footer() {
               <div className="space-y-3">
                 <a
                   href="mailto:info@asiancompute.tech"
-                  className="flex items-center gap-3 text-text-muted hover:text-primary transition-colors"
+                  className="flex items-center gap-3 text-gray-500 hover:text-primary transition-colors"
                 >
                   <Mail className="w-4 h-4" />
                   <span>info@asiancompute.tech</span>
                 </a>
                 <a
                   href="tel:+923149045550"
-                  className="flex items-center gap-3 text-text-muted hover:text-primary transition-colors"
+                  className="flex items-center gap-3 text-gray-500 hover:text-primary transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   <span>+92 314 904 5550 <br /> +92 318 468 6890</span>
                 </a>
-                <div className="flex items-start gap-3 text-text-muted">
+                <div className="flex items-start gap-3 text-gray-500">
                   <MapPin className="w-4 h-4 mt-1" />
                   <span>Global Remote Team</span>
                 </div>
@@ -91,13 +91,13 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h4 className="text-lg font-semibold mb-4">Company</h4>
+              <h4 className="text-lg font-semibold mb-4 text-gray-900">Company</h4>
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-text-muted hover:text-primary transition-colors"
+                      className="text-gray-500 hover:text-primary transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -115,13 +115,13 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <h4 className="text-lg font-semibold mb-4 text-gray-900">Services</h4>
               <ul className="space-y-3">
                 {footerLinks.services.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-text-muted hover:text-primary transition-colors"
+                      className="text-gray-500 hover:text-primary transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -139,13 +139,13 @@ export default function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h4 className="text-lg font-semibold mb-4">Resources</h4>
+              <h4 className="text-lg font-semibold mb-4 text-gray-900">Resources</h4>
               <ul className="space-y-3">
                 {footerLinks.resources.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-text-muted hover:text-primary transition-colors"
+                      className="text-gray-500 hover:text-primary transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -162,7 +162,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="border-t border-white/10 pt-8"
+          className="border-t border-black/8 pt-8"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-6">
@@ -174,7 +174,7 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-text-muted hover:text-primary transition-colors"
+                    className="text-gray-400 hover:text-primary transition-colors"
                     aria-label={social.label}
                   >
                     <Icon className="w-5 h-5" />
@@ -182,12 +182,12 @@ export default function Footer() {
                 );
               })}
             </div>
-            <div className="text-text-muted text-sm text-center md:text-right">
+            <div className="text-gray-400 text-sm text-center md:text-right">
               <p>
                 © {currentYear} AsianCompute. All rights reserved.
               </p>
               <p className="mt-1">
-              
+
               </p>
             </div>
           </div>

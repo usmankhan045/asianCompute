@@ -16,7 +16,7 @@ const caseStudies = [
     metric: "Booked Calls",
     before: "2-3 days response time",
     after: "Instant qualification & routing",
-    gradient: "from-primary/20 to-primary/5",
+    gradient: "from-primary/15 to-primary/5",
   },
   {
     id: "online-coach",
@@ -28,7 +28,7 @@ const caseStudies = [
     metric: "Conversion Rate",
     before: "Manual responses, 20% close rate",
     after: "AI-qualified leads, 60% close rate",
-    gradient: "from-secondary/20 to-secondary/5",
+    gradient: "from-secondary/15 to-secondary/5",
   },
   {
     id: "ecommerce-brand",
@@ -40,7 +40,7 @@ const caseStudies = [
     metric: "Revenue Recovery",
     before: "0% recovery rate",
     after: "32% of abandoned carts recovered",
-    gradient: "from-accent/20 to-accent/5",
+    gradient: "from-accent/15 to-accent/5",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function CaseStudies() {
   return (
     <section
       ref={ref}
-      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
+      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20 bg-white"
       id="case-studies"
     >
       <div className="max-w-7xl mx-auto">
@@ -64,7 +64,7 @@ export default function CaseStudies() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Real <span className="gradient-text">Case Studies</span>
           </h2>
-          <p className="text-base sm:text-xl text-text-muted max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-500 max-w-2xl mx-auto">
             See how automation transformed these businesses
           </p>
         </motion.div>
@@ -90,28 +90,26 @@ export default function CaseStudies() {
                 </div>
               </Link>
 
-              <h3 className="text-xl font-bold mb-2">{study.challenge}</h3>
-              <p className="text-text-muted text-sm mb-6">{study.solution}</p>
+              <h3 className="text-xl font-bold mb-2 text-gray-900">{study.challenge}</h3>
+              <p className="text-gray-500 text-sm mb-6">{study.solution}</p>
 
               <div
                 className={`rounded-xl p-4 sm:p-6 bg-gradient-to-br ${study.gradient} mb-6`}
               >
                 <div className="flex items-center gap-2 mb-2">
                   <TrendingUp className="w-5 h-5 text-primary" />
-                  <span className="text-sm text-text-muted">{study.metric}</span>
+                  <span className="text-sm text-gray-500">{study.metric}</span>
                 </div>
                 <div className="text-3xl sm:text-4xl font-bold gradient-text mb-1">
                   {study.result}
                 </div>
-                <p className="text-sm text-text-muted">{study.resultLabel}</p>
+                <p className="text-sm text-gray-500">{study.resultLabel}</p>
               </div>
 
-              <div className="space-y-3 pt-6 border-t border-white/10">
+              <div className="space-y-3 pt-6 border-t border-black/8">
                 <div>
-                  <span className="text-xs text-text-muted">Before: </span>
-                  <span className="text-sm text-text-muted line-through">
-                    {study.before}
-                  </span>
+                  <span className="text-xs text-gray-400">Before: </span>
+                  <span className="text-sm text-gray-400 line-through">{study.before}</span>
                 </div>
                 <div>
                   <span className="text-xs text-text-muted">After: </span>

@@ -66,7 +66,7 @@ export default function HowItWorksPage() {
             Book a free strategy call to discuss your automation needs.
           </p>
           <Link href="/contact">
-            <button className="px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover">
+            <button className="px-8 py-4 bg-gradient-to-r from-primary via-accent to-secondary text-white font-semibold rounded-lg glow-effect-hover">
               Schedule Your Free Call
             </button>
           </Link>

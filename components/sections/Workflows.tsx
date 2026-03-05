@@ -14,7 +14,7 @@ const workflows = [
     image: "/workflows/migration-workflow.png",
     tags: ["Data Migration", "Batch Processing", "CRM Sync"],
     gradient: "from-primary/20 to-primary/5",
-    accentColor: "#3B82F6",
+    accentColor: "#3DB54A",  // green
     steps: ["Fetch & Validate", "Delete Stale Data", "Merge Sources", "Batch Insert"],
   },
   {
@@ -25,7 +25,7 @@ const workflows = [
     image: "/workflows/gmail-ai-agent.png",
     tags: ["Email Automation", "OpenAI", "Google Drive"],
     gradient: "from-secondary/20 to-secondary/5",
-    accentColor: "#A855F7",
+    accentColor: "#1A5BB6",  // blue
     steps: ["Gmail Trigger", "AI Classification", "Smart Routing", "Auto-Save"],
   },
   {
@@ -36,7 +36,7 @@ const workflows = [
     image: "/workflows/fitness-coach.jpeg",
     tags: ["AI Agent", "Strava", "WhatsApp", "Gemini"],
     gradient: "from-accent/20 to-accent/5",
-    accentColor: "#06B6D4",
+    accentColor: "#00A99D",  // teal
     steps: ["Strava Sync", "Gemini AI Coach", "HTML Report", "Multi-Channel Send"],
   },
   {
@@ -47,7 +47,7 @@ const workflows = [
     image: "/workflows/property-lead.jpeg",
     tags: ["Real Estate", "Skip Tracing", "CRM", "HubSpot"],
     gradient: "from-primary/20 to-accent/5",
-    accentColor: "#3B82F6",
+    accentColor: "#00C8CC",  // bright cyan
     steps: ["Property Search", "Filter & Score", "Skip Trace", "CRM Export"],
   },
 ];
@@ -62,7 +62,7 @@ export default function Workflows() {
   return (
     <section
       ref={ref}
-      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
+      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20 bg-[#F0FFFE]"
       id="workflows"
     >
       <div className="max-w-7xl mx-auto">
@@ -84,7 +84,7 @@ export default function Workflows() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Real <span className="gradient-text">Workflows</span> We Build
           </h2>
-          <p className="text-base sm:text-xl text-text-muted max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-500 max-w-2xl mx-auto">
             Battle-tested automation systems running in production — click any workflow to explore it in detail
           </p>
         </motion.div>
@@ -102,14 +102,14 @@ export default function Workflows() {
               onClick={() => setActiveModal(workflow.id)}
             >
               {/* Workflow Image Preview */}
-              <div className="relative h-40 sm:h-52 overflow-hidden bg-white/5">
+              <div className="relative h-40 sm:h-52 overflow-hidden bg-gray-50">
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center"
                   style={{
                     background: `radial-gradient(circle, ${workflow.accentColor}22 0%, transparent 70%)`,
                   }}
                 >
-                  <div className="flex items-center gap-2 glass px-4 py-2 rounded-full text-sm font-semibold text-white border border-white/20">
+                  <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold text-gray-800 border border-black/10">
                     <ZoomIn className="w-4 h-4" />
                     View Full Workflow
                   </div>
@@ -122,19 +122,19 @@ export default function Workflows() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent" />
               </div>
 
               {/* Workflow Info */}
               <div className="p-4 sm:p-6">
                 <div className="flex items-start justify-between mb-2 sm:mb-3">
-                  <h3 className="text-base sm:text-xl font-bold group-hover:text-primary transition-colors">
+                  <h3 className="text-base sm:text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">
                     {workflow.title}
                   </h3>
                   <ArrowRight className="w-5 h-5 text-text-muted group-hover:text-primary group-hover:translate-x-1 transition-all flex-shrink-0 mt-0.5" />
                 </div>
 
-                <p className="text-text-muted text-sm leading-relaxed mb-4 line-clamp-2">
+                <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-2">
                   {workflow.description}
                 </p>
 
@@ -142,11 +142,11 @@ export default function Workflows() {
                 <div className="flex items-center gap-1.5 mb-4 flex-wrap">
                   {workflow.steps.map((step, i) => (
                     <div key={i} className="flex items-center gap-1.5">
-                      <span className="text-xs px-2 py-1 rounded-md glass text-text-muted border border-white/10">
+                      <span className="text-xs px-2 py-1 rounded-md bg-gray-100 text-gray-600 border border-gray-200">
                         {step}
                       </span>
                       {i < workflow.steps.length - 1 && (
-                        <span className="text-text-muted/40 text-xs">→</span>
+                        <span className="text-gray-400/60 text-xs">→</span>
                       )}
                     </div>
                   ))}
@@ -180,12 +180,12 @@ export default function Workflows() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center mt-12"
         >
-          <p className="text-text-muted mb-4">
+          <p className="text-gray-500 mb-4">
             Want a custom workflow built for your specific business needs?
           </p>
           <a href="/contact">
             <motion.button
-              className="px-8 py-3 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover inline-flex items-center gap-2"
+              className="px-8 py-3 bg-gradient-to-r from-primary via-accent to-secondary text-white font-semibold rounded-lg glow-effect-hover inline-flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -206,20 +206,20 @@ export default function Workflows() {
           onClick={() => setActiveModal(null)}
         >
           {/* Backdrop */}
-          <div className="absolute inset-0 bg-background/90 backdrop-blur-xl" />
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
 
           {/* Modal Content */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="relative w-full max-w-5xl max-h-[85vh] overflow-y-auto glass rounded-2xl border border-white/10"
+            className="relative w-full max-w-5xl max-h-[85vh] overflow-y-auto bg-white rounded-2xl border border-black/10 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={() => setActiveModal(null)}
-              className="absolute top-4 right-4 z-20 w-9 h-9 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-colors border border-white/10"
+              className="absolute top-4 right-4 z-20 w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors border border-black/8"
             >
               <X className="w-4 h-4" />
             </button>
@@ -236,15 +236,15 @@ export default function Workflows() {
             </div>
 
             {/* Modal Info */}
-            <div className="p-4 sm:p-5 border-t border-white/10">
+            <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-black/8">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-lg sm:text-xl font-bold mb-1">{activeWorkflow.title}</h3>
-                  <p className="text-text-muted text-sm leading-relaxed line-clamp-2">{activeWorkflow.description}</p>
+                  <div className="text-base sm:text-xl font-bold truncate text-gray-900">{activeWorkflow.title}</div>
+                  <div className="text-sm text-gray-500 truncate">{activeWorkflow.description}</div>
                 </div>
                 <a href="/contact" onClick={() => setActiveModal(null)} className="flex-shrink-0">
                   <motion.button
-                    className="px-5 py-2.5 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg glow-effect-hover text-sm whitespace-nowrap"
+                    className="px-5 py-2.5 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-lg glow-effect-hover text-sm whitespace-nowrap"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >

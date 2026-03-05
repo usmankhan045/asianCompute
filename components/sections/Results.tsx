@@ -79,7 +79,7 @@ export default function Results() {
   return (
     <section
       ref={ref}
-      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10"
+      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 bg-white"
       id="results"
     >
       <div className="max-w-7xl mx-auto">
@@ -92,7 +92,7 @@ export default function Results() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Proven <span className="gradient-text">Results</span>
           </h2>
-          <p className="text-base sm:text-xl text-text-muted max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-500 max-w-2xl mx-auto">
             Real metrics from businesses we've automated
           </p>
         </motion.div>
@@ -104,8 +104,8 @@ export default function Results() {
             const suffix = result.metric.includes("%")
               ? "%"
               : result.metric.includes("x")
-              ? "x"
-              : "";
+                ? "x"
+                : "";
 
             return (
               <motion.div
@@ -141,7 +141,7 @@ export default function Results() {
                     result.metric
                   )}
                 </div>
-                <p className="text-text-muted text-xs sm:text-lg">{result.label}</p>
+                <p className="text-gray-500 text-xs sm:text-lg">{result.label}</p>
               </motion.div>
             );
           })}

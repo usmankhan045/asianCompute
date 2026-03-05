@@ -57,7 +57,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="relative min-h-screen pt-20">
+    <main className="relative min-h-screen pt-20 bg-white">
       <BackgroundGrid />
       <FloatingShapes />
 
@@ -67,7 +67,7 @@ export default function ContactPage() {
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6">
             Get In <span className="gradient-text">Touch</span>
           </h1>
-          <p className="text-base sm:text-xl text-text-muted leading-relaxed">
+          <p className="text-base sm:text-xl text-gray-500 leading-relaxed">
             Ready to automate your revenue? Book a free strategy call and
             discover how intelligent systems can scale your business.
           </p>
@@ -95,7 +95,7 @@ export default function ContactPage() {
                 >
                   <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
                   <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
-                  <p className="text-text-muted">
+                  <p className="text-gray-500">
                     We've sent a confirmation to your email. Our team will get back to you within 24 hours.
                   </p>
                 </motion.div>
@@ -104,7 +104,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium mb-2"
+                      className="block text-sm font-medium mb-2 text-gray-700"
                     >
                       Full Name *
                     </label>
@@ -115,14 +115,14 @@ export default function ContactPage() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg glass border border-white/10 focus:border-primary focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:border-primary focus:outline-none transition-colors text-gray-900 placeholder-gray-400"
                       placeholder="John Doe"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium mb-2"
+                      className="block text-sm font-medium mb-2 text-gray-700"
                     >
                       Email Address *
                     </label>
@@ -133,14 +133,14 @@ export default function ContactPage() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg glass border border-white/10 focus:border-primary focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:border-primary focus:outline-none transition-colors text-gray-900 placeholder-gray-400"
                       placeholder="john@example.com"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="company"
-                      className="block text-sm font-medium mb-2"
+                      className="block text-sm font-medium mb-2 text-gray-700"
                     >
                       Company Name
                     </label>
@@ -150,14 +150,14 @@ export default function ContactPage() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg glass border border-white/10 focus:border-primary focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:border-primary focus:outline-none transition-colors text-gray-900 placeholder-gray-400"
                       placeholder="Your Company"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-medium mb-2"
+                      className="block text-sm font-medium mb-2 text-gray-700"
                     >
                       Phone Number
                     </label>
@@ -167,14 +167,14 @@ export default function ContactPage() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg glass border border-white/10 focus:border-primary focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:border-primary focus:outline-none transition-colors text-gray-900 placeholder-gray-400"
                       placeholder="+92 314 904 5550"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium mb-2"
+                      className="block text-sm font-medium mb-2 text-gray-700"
                     >
                       Message *
                     </label>
@@ -185,19 +185,19 @@ export default function ContactPage() {
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg glass border border-white/10 focus:border-primary focus:outline-none transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:border-primary focus:outline-none transition-colors resize-none text-gray-900 placeholder-gray-400"
                       placeholder="Tell us about your automation needs..."
                     />
                   </div>
                   {error && (
-                    <div className="p-4 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-sm">
+                    <div className="p-4 rounded-lg bg-red-50 border border-red-200 text-red-600 text-sm">
                       {error}
                     </div>
                   )}
                   <motion.button
                     type="submit"
                     disabled={loading}
-                    className="w-full px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="w-full px-8 py-4 bg-gradient-to-r from-primary via-accent to-secondary text-white font-semibold rounded-lg glow-effect-hover flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                     whileHover={loading ? {} : { scale: 1.02 }}
                     whileTap={loading ? {} : { scale: 0.98 }}
                   >
@@ -233,28 +233,28 @@ export default function ContactPage() {
                 <div className="space-y-6">
                   <a
                     href="mailto:info@asiancompute.tech"
-                    className="flex items-start gap-4 text-text-muted hover:text-primary transition-colors"
+                    className="flex items-start gap-4 text-gray-500 hover:text-primary transition-colors"
                   >
                     <Mail className="w-6 h-6 text-primary mt-1" />
                     <div>
-                      <div className="font-medium text-text">Email</div>
+                      <div className="font-medium text-gray-900">Email</div>
                       <div>info@asiancompute.tech</div>
                     </div>
                   </a>
                   <a
                     href="tel:+923149045550"
-                    className="flex items-start gap-4 text-text-muted hover:text-primary transition-colors"
+                    className="flex items-start gap-4 text-gray-500 hover:text-primary transition-colors"
                   >
                     <Phone className="w-6 h-6 text-primary mt-1" />
                     <div>
-                      <div className="font-medium text-text">Phone</div>
+                      <div className="font-medium text-gray-900">Phone</div>
                       <div>+92 314 904 5550<br />+92 318 468 6890</div>
                     </div>
                   </a>
-                  <div className="flex items-start gap-4 text-text-muted">
+                  <div className="flex items-start gap-4 text-gray-500">
                     <MapPin className="w-6 h-6 text-primary mt-1" />
                     <div>
-                      <div className="font-medium text-text">Location</div>
+                      <div className="font-medium text-gray-900">Location</div>
                       <div>Global Remote Team</div>
                     </div>
                   </div>
@@ -263,7 +263,7 @@ export default function ContactPage() {
 
               <div className="glass glass-hover rounded-2xl p-5 sm:p-8">
                 <h3 className="text-xl sm:text-2xl font-bold mb-4">Why Choose Us?</h3>
-                <ul className="space-y-3 text-text-muted">
+                <ul className="space-y-3 text-gray-500">
                   <li className="flex items-start gap-3">
                     <span className="text-primary mt-1">✓</span>
                     <span>Free strategy consultation</span>

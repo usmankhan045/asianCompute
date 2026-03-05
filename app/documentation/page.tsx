@@ -28,7 +28,7 @@ export default function DocumentationPage() {
               please contact us for access.
             </p>
             <Link href="/contact">
-              <button className="px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover">
+              <button className="px-8 py-4 bg-gradient-to-r from-primary via-accent to-secondary text-white font-semibold rounded-lg glow-effect-hover">
                 Contact Us
               </button>
             </Link>

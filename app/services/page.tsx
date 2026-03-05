@@ -88,7 +88,7 @@ function ServicesContent() {
 
   if (selectedService) {
     return (
-      <main className="relative min-h-screen pt-20">
+      <main className="relative min-h-screen pt-20 bg-white">
         <BackgroundGrid />
         <FloatingShapes />
 
@@ -112,14 +112,14 @@ function ServicesContent() {
                   <div className="flex items-center gap-4 mb-4">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">{selectedService.title}</h1>
                   </div>
-                  <p className="text-base sm:text-xl text-text-muted mb-8">
+                  <p className="text-base sm:text-xl text-gray-500 mb-8">
                     {selectedService.description}
                   </p>
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-4 mb-8">
                 {selectedService.features.map((feature: string, i: number) => (
-                  <div key={i} className="flex items-start gap-3 text-text-muted">
+                  <div key={i} className="flex items-start gap-3 text-gray-600">
                     <span className="text-primary mt-1">✓</span>
                     <span>{feature}</span>
                   </div>
@@ -127,7 +127,7 @@ function ServicesContent() {
               </div>
               <Link href="/contact">
                 <motion.button
-                  className="w-full px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover flex items-center justify-center gap-2"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-primary via-accent to-secondary text-white font-semibold rounded-lg glow-effect-hover flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -143,7 +143,7 @@ function ServicesContent() {
   }
 
   return (
-    <main className="relative min-h-screen pt-20">
+    <main className="relative min-h-screen pt-20 bg-white">
       <BackgroundGrid />
       <FloatingShapes />
 
@@ -152,12 +152,12 @@ function ServicesContent() {
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6">
             Our <span className="gradient-text">Services</span>
           </h1>
-          <p className="text-base sm:text-xl text-text-muted leading-relaxed mb-8">
+          <p className="text-base sm:text-xl text-gray-500 leading-relaxed mb-8">
             Intelligent automation systems that work while you sleep. Built with
             AI to scale your revenue automatically.
           </p>
           <Link href="/#contact">
-            <button className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover">
+            <button className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary via-accent to-secondary text-white font-semibold rounded-lg glow-effect-hover">
               Get Started Today
             </button>
           </Link>
@@ -182,7 +182,7 @@ function ServicesContent() {
                     <div className="flex items-center gap-4 mb-4">
                       <h3 className="text-2xl sm:text-3xl font-bold">{service.title}</h3>
                     </div>
-                    <p className="text-base sm:text-xl text-text-muted mb-6">
+                    <p className="text-base sm:text-xl text-gray-500 mb-6">
                       {service.description}
                     </p>
                   </div>
@@ -191,7 +191,7 @@ function ServicesContent() {
                   {service.features.map((feature, i) => (
                     <div
                       key={i}
-                      className="flex items-start gap-3 text-text-muted"
+                      className="flex items-start gap-3 text-gray-600"
                     >
                       <span className="text-primary mt-1">✓</span>
                       <span>{feature}</span>
@@ -209,12 +209,12 @@ function ServicesContent() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Ready to Automate Your Revenue?
           </h2>
-          <p className="text-base sm:text-xl text-text-muted mb-8">
+          <p className="text-base sm:text-xl text-gray-500 mb-8">
             Book a free strategy call and discover how intelligent systems can
             scale your business.
           </p>
           <Link href="/#contact">
-            <button className="px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover flex items-center gap-2 mx-auto">
+            <button className="px-8 py-4 bg-gradient-to-r from-primary via-accent to-secondary text-white font-semibold rounded-lg glow-effect-hover flex items-center gap-2 mx-auto">
               Book Free Strategy Call
               <ArrowRight className="w-5 h-5" />
             </button>
@@ -229,7 +229,7 @@ export default function ServicesPage() {
   return (
     <Suspense fallback={
       <main className="relative min-h-screen pt-20 flex items-center justify-center">
-        <div className="text-text-muted">Loading...</div>
+        <div className="text-gray-500">Loading...</div>
       </main>
     }>
       <ServicesContent />

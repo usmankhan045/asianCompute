@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden">
 
-      {/* Full Background Image — clean, no color mixing */}
+      {/* Full Background Image — very faint on light background */}
       <div className="absolute inset-0 z-[1] pointer-events-none">
         <Image
           src="/hr-ai-ecosystem.png.jpeg"
@@ -16,12 +16,15 @@ export default function Hero() {
           fill
           priority
           quality={90}
-          className="object-cover object-center opacity-20 dark:opacity-[0.07]"
+          className="object-cover object-center opacity-[0.05]"
+          style={{ filter: "brightness(2) saturate(0.5)" }}
         />
       </div>
+      {/* White wash overlay so bg image never darkens the page */}
+      <div className="absolute inset-0 z-[2] pointer-events-none bg-white/60" />
 
       {/* Left Content (Perfect Vertical Center) */}
-      <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 sm:left-12 sm:right-auto lg:left-24 max-w-4xl z-10">
+      <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 sm:left-12 sm:right-auto lg:left-24 max-w-4xl z-20">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -40,7 +43,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-text leading-tight"
+            className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-800 leading-tight"
           >
             Make Your Business Smart
           </motion.h2>
@@ -52,13 +55,13 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.6 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <ArrowDown className="w-6 h-6 text-text-muted" />
+          <ArrowDown className="w-6 h-6 text-primary/70" />
         </motion.div>
       </motion.div>
 

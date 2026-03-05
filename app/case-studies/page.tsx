@@ -110,13 +110,13 @@ function CaseStudiesContent() {
 
   if (selectedCase) {
     return (
-      <main className="relative min-h-screen pt-20">
+      <main className="relative min-h-screen pt-20 bg-white">
         <BackgroundGrid />
         <FloatingShapes />
 
         <section className="relative py-24 px-4 sm:px-6 lg:px-8 z-10">
           <div className="max-w-5xl mx-auto">
-            <Link href="/#case-studies" className="inline-flex items-center gap-2 text-text-muted hover:text-primary mb-8 transition-colors">
+            <Link href="/#case-studies" className="inline-flex items-center gap-2 text-gray-500 hover:text-primary mb-8 transition-colors">
               <ArrowLeft className="w-4 h-4" />
               <span>Back to All Case Studies</span>
             </Link>
@@ -206,7 +206,7 @@ function CaseStudiesContent() {
 
               <Link href="/#contact">
                 <motion.button
-                  className="w-full px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-primary via-accent to-secondary text-white font-semibold rounded-lg glow-effect-hover"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -230,7 +230,7 @@ function CaseStudiesContent() {
           <h1 className="text-5xl sm:text-6xl font-bold mb-6">
             Case <span className="gradient-text">Studies</span>
           </h1>
-          <p className="text-xl text-text-muted leading-relaxed">
+          <p className="text-xl text-gray-500 leading-relaxed">
             See how intelligent automation systems transformed these businesses
             and drove measurable revenue growth.
           </p>
@@ -324,11 +324,11 @@ function CaseStudiesContent() {
           <h2 className="text-3xl font-bold mb-4">
             Ready to See Similar Results?
           </h2>
-          <p className="text-xl text-text-muted mb-8">
+          <p className="text-xl text-gray-500 mb-8">
             Let's discuss how we can automate your revenue operations.
           </p>
           <Link href="/#contact">
-            <button className="px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover">
+            <button className="px-8 py-4 bg-gradient-to-r from-primary via-accent to-secondary text-white font-semibold rounded-lg glow-effect-hover">
               Book Free Strategy Call
             </button>
           </Link>
@@ -342,7 +342,7 @@ export default function CaseStudiesPage() {
   return (
     <Suspense fallback={
       <main className="relative min-h-screen pt-20 flex items-center justify-center">
-        <div className="text-text-muted">Loading...</div>
+        <div className="text-gray-500">Loading...</div>
       </main>
     }>
       <CaseStudiesContent />

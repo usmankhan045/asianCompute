@@ -36,7 +36,7 @@ export default function HowItWorks() {
   return (
     <section
       ref={ref}
-      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
+      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20 bg-[#F0FAF1]"
       id="how-it-works"
     >
       <div className="max-w-7xl mx-auto">
@@ -49,14 +49,14 @@ export default function HowItWorks() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             How It <span className="gradient-text">Works</span>
           </h2>
-          <p className="text-base sm:text-xl text-text-muted max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-500 max-w-2xl mx-auto">
             A proven process to transform your revenue operations
           </p>
         </motion.div>
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent" />
+          <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-secondary" />
 
           <div className="space-y-10 sm:space-y-16 md:space-y-24">
             {steps.map((step, index) => {
@@ -75,7 +75,7 @@ export default function HowItWorks() {
                 >
                   {/* Timeline dot */}
                   <div className="hidden md:flex relative z-10 flex-shrink-0 w-16 h-16 items-center justify-center">
-                    <div className="absolute w-16 h-16 rounded-full bg-background border-4 border-primary" />
+                    <div className="absolute w-16 h-16 rounded-full bg-white border-4 border-primary" />
                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary" />
                   </div>
 
@@ -85,17 +85,17 @@ export default function HowItWorks() {
                         <Icon className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <span className="text-sm text-text-muted font-medium">
+                        <span className="text-sm text-gray-400 font-medium">
                           Step {step.number}
                         </span>
-                        <h3 className="text-2xl font-bold">{step.title}</h3>
+                        <h3 className="text-2xl font-bold text-gray-900">{step.title}</h3>
                       </div>
                     </div>
-                    <p className="text-text-muted leading-relaxed mb-4">
+                    <p className="text-gray-600 leading-relaxed mb-4">
                       {step.description}
                     </p>
                     {step.badge && (
-                      <span className="inline-block px-3 py-1 rounded-full glass text-xs font-medium text-secondary">
+                      <span className="inline-block px-3 py-1 rounded-full text-xs font-medium text-accent border border-accent/30 bg-accent/8">
                         {step.badge}
                       </span>
                     )}

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <main className="relative min-h-screen pt-20">
+    <main className="relative min-h-screen pt-20 bg-white">
       <BackgroundGrid />
       <FloatingShapes />
 
@@ -19,16 +19,16 @@ export default function BlogPage() {
           <h1 className="text-5xl sm:text-6xl font-bold mb-6">
             Our <span className="gradient-text">Blog</span>
           </h1>
-          <p className="text-xl text-text-muted leading-relaxed mb-12">
+          <p className="text-xl text-gray-500 leading-relaxed mb-12">
             Insights, tips, and strategies on AI automation and revenue growth.
           </p>
           <div className="glass glass-hover rounded-2xl p-12">
-            <p className="text-text-muted mb-6">
+            <p className="text-gray-500 mb-6">
               Our blog is coming soon! Check back for the latest insights on AI
               automation, intelligent workflows, and revenue optimization strategies.
             </p>
             <Link href="/contact">
-              <button className="px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent text-white font-semibold rounded-lg glow-effect-hover">
+              <button className="px-8 py-4 bg-gradient-to-r from-primary via-accent to-secondary text-white font-semibold rounded-lg glow-effect-hover">
                 Get Updates
               </button>
             </Link>

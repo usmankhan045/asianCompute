@@ -18,7 +18,7 @@ const services = [
     description:
       "Automatically qualify, score, and route leads to your team. Never miss a hot prospect again.",
     icon: Users,
-    gradient: "from-primary/20 to-primary/5",
+    gradient: "from-primary/15 to-primary/5",
   },
   {
     id: "crm-automation",
@@ -26,7 +26,7 @@ const services = [
     description:
       "Intelligent workflows that sync data, update pipelines, and trigger actions automatically.",
     icon: Workflow,
-    gradient: "from-secondary/20 to-secondary/5",
+    gradient: "from-secondary/15 to-secondary/5",
   },
   {
     id: "ai-chatbots",
@@ -34,7 +34,7 @@ const services = [
     description:
       "Intelligent assistants that handle inquiries, book calls, and qualify leads 24/7.",
     icon: MessageCircle,
-    gradient: "from-accent/20 to-accent/5",
+    gradient: "from-accent/15 to-accent/5",
   },
   {
     id: "ecommerce",
@@ -42,7 +42,7 @@ const services = [
     description:
       "Abandoned cart recovery, personalized recommendations, and automated re-engagement systems.",
     icon: ShoppingBag,
-    gradient: "from-primary/20 to-accent/5",
+    gradient: "from-accent/10 to-secondary/5",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function Services() {
   return (
     <section
       ref={ref}
-      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
+      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20 bg-white"
       id="services"
     >
       <div className="max-w-7xl mx-auto">
@@ -67,7 +67,7 @@ export default function Services() {
             Revenue Automation{" "}
             <span className="gradient-text">Systems</span>
           </h2>
-          <p className="text-base sm:text-xl text-text-muted max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-500 max-w-2xl mx-auto">
             Intelligent workflows that work while you sleep
           </p>
         </motion.div>
@@ -95,8 +95,8 @@ export default function Services() {
                     <Icon className="w-8 h-8 text-primary" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                <p className="text-text-muted mb-6 leading-relaxed">
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">{service.title}</h3>
+                <p className="text-gray-500 mb-6 leading-relaxed">
                   {service.description}
                 </p>
                 <Link href={`/services?service=${service.id}`} className="flex items-center gap-2 text-primary font-semibold group-hover:gap-4 transition-all">

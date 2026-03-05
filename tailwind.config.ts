@@ -9,12 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0A0F1C",
-        primary: "#3B82F6",
-        secondary: "#A855F7",
-        accent: "#06B6D4",
-        text: "#E5E7EB",
-        "text-muted": "#9CA3AF",
+        background: "#FFFFFF",        // pure white base
+        "bg-soft": "#F0FAF1",        // very faint green-white for alternate sections
+        "bg-card": "#FFFFFF",        // card surfaces
+        "bg-subtle": "#F8FFFE",        // teal-tinted subtle bg for special sections
+        primary: "#3DB54A",        // brand green — unchanged
+        secondary: "#1A5BB6",        // brand blue — unchanged
+        accent: "#00A99D",        // brand teal — unchanged
+        node: "#7B5EA7",        // purple node — unchanged, still sparingly
+        cyan: "#00C8CC",        // bright cyan — unchanged
+        text: "#0F1A0F",        // near-black with green undertone
+        "text-muted": "#6B7280",      // medium gray for secondary text
+        "text-body": "#374151",      // body text
       },
       animation: {
         "gradient": "gradient 8s linear infinite",

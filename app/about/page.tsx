@@ -10,17 +10,17 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="relative min-h-screen pt-20">
+    <main className="relative min-h-screen pt-20 bg-white">
       <BackgroundGrid />
       <FloatingShapes />
-      
+
       {/* Hero Section */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl sm:text-6xl font-bold mb-6">
             About <span className="gradient-text">AsianCompute</span>
           </h1>
-          <p className="text-xl text-text-muted leading-relaxed">
+          <p className="text-xl text-gray-500 leading-relaxed">
             We're a specialized AI Growth Automation Agency founded by two
             partners with deep expertise in automation systems. Our mission is
             to help businesses scale their revenue through intelligent
@@ -34,13 +34,13 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <div className="glass glass-hover rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl font-bold mb-6 gradient-text">Our Mission</h2>
-            <p className="text-lg text-text-muted leading-relaxed mb-6">
+            <p className="text-lg text-gray-600 leading-relaxed mb-6">
               At AsianCompute, we believe that every business should be able to
               scale without being limited by manual processes. We build
               intelligent automation systems using AI that eliminate
               repetitive work, optimize lead flow, and increase conversion rates.
             </p>
-            <p className="text-lg text-text-muted leading-relaxed">
+            <p className="text-lg text-gray-600 leading-relaxed">
               Our focus is on delivering measurable ROI for marketing agencies,
               online coaches, and e-commerce brands who want to grow faster and
               work smarter.
@@ -81,7 +81,7 @@ export default function AboutPage() {
                 className="glass glass-hover rounded-2xl p-8"
               >
                 <h3 className="text-2xl font-bold mb-4">{value.title}</h3>
-                <p className="text-text-muted leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {value.description}
                 </p>
               </div>

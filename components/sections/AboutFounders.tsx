@@ -10,14 +10,14 @@ const founders = [
     role: "AI Systems Architect",
     bio: "Expert in building enterprise automation systems with AI. Specializes in creating scalable workflows that eliminate manual processes and drive revenue growth for businesses.",
     linkedin: "https://linkedin.com/in/muhammadusman80",
-    gradient: "from-primary/20 to-primary/5",
+    gradient: "from-primary/25 to-accent/10",
   },
   {
     name: "Muhammad Awais",
     role: "Automation Strategy Lead",
     bio: "Growth strategist focused on revenue automation for agencies, coaches, and e-commerce brands. Designs intelligent systems that optimize lead flow and increase conversion rates.",
     linkedin: "https://linkedin.com/in/muhammad-awais-ashfaq-287359396",
-    gradient: "from-secondary/20 to-secondary/5",
+    gradient: "from-secondary/25 to-accent/10",
   },
 ];
 
@@ -28,7 +28,7 @@ export default function AboutFounders() {
   return (
     <section
       ref={ref}
-      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20"
+      className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 z-10 scroll-mt-20 bg-[#F0FAF1]"
       id="about"
     >
       <div className="max-w-7xl mx-auto">
@@ -41,7 +41,7 @@ export default function AboutFounders() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Meet the <span className="gradient-text">Founders</span>
           </h2>
-          <p className="text-base sm:text-xl text-text-muted max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-500 max-w-2xl mx-auto">
             Two partners with deep expertise in AI automation and growth
             strategy
           </p>
@@ -67,20 +67,18 @@ export default function AboutFounders() {
                   </span>
                 </div>
                 <div className="flex-1 text-center sm:text-left">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-1">{founder.name}</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-1 text-gray-900">{founder.name}</h3>
                   <p className="text-primary font-medium mb-3 sm:mb-4">
                     {founder.role}
                   </p>
-                  <p className="text-text-muted leading-relaxed text-sm sm:text-base">
-                    {founder.bio}
-                  </p>
+                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{founder.bio}</p>
                 </div>
               </div>
               <a
                 href={founder.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
                 <span className="font-medium">LinkedIn</span>
